@@ -1,0 +1,35 @@
+---
+title: "National Parks in Sri Lanka"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Rajitha Senanayake
+#### 18/06/2020
+
+```{r}
+library(knitr)
+library('leaflet')
+library('dplyr')
+```
+
+- Initializing the map
+```{r}
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=6.2784, lng=81.4019, popup='Yala National Park') %>%
+  addMarkers(lat=6.4381, lng=80.8886, popup='Udawalawe National Park') %>%
+  addMarkers(lat=6.8021, lng=80.8074, popup='Horton Plains National Park') %>%
+  addMarkers(lat=8.4564, lng=80.0476, popup='Wilpattu National Park') %>%
+  addMarkers(lat=8.0330, lng=80.8244, popup='Minneriya National Park') %>%
+  addMarkers(lat=7.7532, lng=80.9208, popup='Wasgamuwa National Park') %>%
+  addMarkers(lat=6.5730, lng=81.6693, popup='Kumana Plains National Park') 
+```
+-View Map
+```{r}
+m
+```
+
